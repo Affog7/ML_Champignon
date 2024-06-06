@@ -15,7 +15,7 @@ export default async function Home() {
     // Render your component using the fetched data
     return (
         <main className={styles.main}>
-            <h1 className={styles.title}>Mushroom</h1>
+            <h1 className={styles.title}>Mushroom Classifier</h1>
             {/* Render the fetched data here */}
 
             <FormPrediction />
