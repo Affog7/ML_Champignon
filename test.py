@@ -1,15 +1,15 @@
 import pickle
-from flask import Flask, request, jsonify
+
 
 app = Flask(__name__)
 
-# Charger le modèle picklé
-model = pickle.load(open('./random_forest_model.pkl', 'rb'))
+# Chargement du modèle 
+model = pickle.load(open('random_forest_model.pkl', 'rb'))
 
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()
-    features = [data['sepal_length'], data['sepal_width'], data['petal_length'], data['petal_width']]
+    features = [data['cap-diameter'], data['cap-shape'], data['gill-attachment'], data['gill-color'], data['stem-height'], data['stem-width'], data['stem-color'],data['season']]
     prediction = model.predict([features])[0]
     return jsonify({'prediction': prediction})
 
