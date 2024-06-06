@@ -8,9 +8,9 @@ export default async function Home() {
     // Define an async function to fetch data
 
     // Await the data fetching function and use its result
-    let mushrooms = await getMushrooms();
+    // let mushrooms = await getMushrooms();
 
-    console.log('[debug]', mushrooms)
+    // console.log('[debug]', mushrooms)
 
     // Render your component using the fetched data
     return (

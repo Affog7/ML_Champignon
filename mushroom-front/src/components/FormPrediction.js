@@ -28,6 +28,7 @@ export default function FormPrediction() {
             'season': parseFloat(season)
         };
         const mushrooms = await getMushrooms(mushroomData);
+        console.log('[debug] RESULT IS ', mushrooms)
         setResult(mushrooms)
 
     };
@@ -53,7 +54,7 @@ export default function FormPrediction() {
             {result !== null && (
                 <div className={styles.form__mushroom__result}>
                     <p className={styles.form__mushroom__result__text}>
-                        This mushroom is : <span>{result?.prediction}</span>
+                        This mushroom is : <span>{result?.prediction === 1 ? 'Edible' : 'Poisonous'}</span>
                     </p>
                 </div>
             )}
