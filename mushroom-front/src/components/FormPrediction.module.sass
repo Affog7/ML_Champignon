@@ -1,0 +1,66 @@
+@use '../mixins/variables' as *
+
+.form__mushroom
+  display:  grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-template-rows: repeat(5, auto)
+  padding: 4rem 2rem 2rem
+  gap: 1rem 2rem
+  background: $primary
+
+  border-radius: 4rem
+
+
+  &__field
+    font-size: 12px
+    font-weight: 400
+    padding: .25rem
+    border-radius: 12px
+    border: $secondary-light solid 2px
+    background: white
+    color: #10439F
+
+    &::placeholder
+      color: $primary-transparent
+
+    &__label
+      font-size: 20px
+      font-weight: 700
+
+    &__container
+      border: $secondary-light solid 2px
+      display: flex
+      flex-direction: column
+      padding: 1rem 1rem
+      background: $secondary
+      border-radius: 1rem
+      gap: .5rem
+      color: $text
+
+  &__submit
+    padding: 2rem
+    border-radius: 2rem
+    border: $secondary-light solid 2px
+    background-color: $secondary
+
+    font-size: 24px
+    font-weight: 700
+
+    transition: all .3s ease
+
+    cursor: pointer
+
+    &:hover
+      background: $secondary-light
+      border-color: $secondary
+      color: $primary-transparent
+
+
+    &__container
+      grid-area: 5 / 1 / 6 / 3
+
+      display: flex
+      justify-content: center
+      align-items: center
+      padding-top: 4rem
+
