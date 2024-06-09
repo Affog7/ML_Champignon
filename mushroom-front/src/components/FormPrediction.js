@@ -54,7 +54,7 @@ export default function FormPrediction() {
             {result !== null && (
                 <div className={styles.form__mushroom__result}>
                     <p className={styles.form__mushroom__result__text}>
-                        This mushroom is : <span>{result?.prediction === 1 ? 'Edible' : 'Poisonous'}</span>
+                        This mushroom is : <span>{result?.prediction === 1 ? 'Poisonous' : 'Edible'}</span>
                     </p>
                 </div>
             )}
